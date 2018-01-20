@@ -7,19 +7,27 @@
     </head>
     <body>
         <div>TODO write content</div>
-        
+
         <script>
-        var p = document.createElement('p');
-        var textnode = document.createTextNode('Water'); 
-        p.appendChild(textnode);
-        document.body.appendChild(p);
-
-
-        var div = document.querySelector('div');
-
-        div.appendChild(p);            
+            let p = document.createElement('p')
+            let textnode = document.createTextNode('Water');
+            p.appendChild(textnode)
+             p.setAttribute("id", 'customID');
+            /* Different behavior, Browser moves the element p from the body to the element
+             * unless we clone it .cloneNode(true)
+             */
+                        
+            document.body.appendChild(p.cloneNode)
             
+
+
+            let div = document.querySelector('div')
+            div.appendChild(p)
+            
+            
+            
+
         </script>
-        
+
     </body>
 </html>

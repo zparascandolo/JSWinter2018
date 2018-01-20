@@ -7,22 +7,25 @@
     </head>
     <body>
         <div>TODO write content</div>
-        
+
         <script>
-            
-var div = document.querySelector('div');
-var htmlStr = '';
+            /* in netbeans from the menu `Source->format` or `Alt+Shift+F` to format the code */
 
-htmlStr += '<p>Water</p>';
-htmlStr += '<p>earth</p>';
-htmlStr += '<p>Fire</p>';
-div.innerHTML += htmlStr;
+            let div = document.querySelector('div')
+            let htmlStr = ''
 
-document.body.innerHTML += '<p>Water</p>';
+            htmlStr += '<p>Water</p>'
+            htmlStr += '<p>earth</p>'
+            htmlStr += '<p>Fire</p>'
+            div.innerHTML += htmlStr // place the HTML into the DOM element
 
-var htmlcontents = div.innerHTML;
-console.log(htmlcontents);
-            
-            </script>
+            document.body.innerHTML += '<p>Water</p>'
+
+            /* you can get the HTML content from an element */
+            let htmlcontents = div.innerHTML
+            console.log(htmlcontents)
+
+
+        </script>
     </body>
 </html>

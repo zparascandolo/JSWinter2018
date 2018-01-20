@@ -11,28 +11,30 @@
                 width: 50px;
                 transition: width 20s;
             }
-            
+
             .big {
                 width: 1000px
-                
+
             }
-            
-            
-            </style>
+
+
+        </style>
     </head>
     <body>
         <div class="error">TODO write content</div>
         <div>TODO write content</div>
         <script>
+
+            var element = document.querySelector('.error')
+
+            // element.classList.add('error');
+            element.classList.add('big')
             
-        var element = document.querySelector('.error');
-        
-        // element.classList.add('error');
-        element.classList.add('big');
-        
-        // element.style.backgroundColor = 'blue';
-        element.style.textAlign = 'center';
-            
+            // Todo: function to remove error class
+
+            // element.style.backgroundColor = 'blue';
+            element.style.textAlign = 'center'
+
         </script>
     </body>
 </html>
