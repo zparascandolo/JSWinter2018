@@ -9,12 +9,11 @@
     <body>
         <script>
             num1 = 0;
-            numbers = [];
 
             for (i = 1; i < 101; i++)
             {
                 num1 = num1 + 1;
-                console.log(num1)
+                
 
 
                 if (num1 % 2 === 0 && num1 % 3 === 0) {
@@ -24,7 +23,12 @@
                 } else if (num1 % 2 === 0) {
                     console.log("Fizz");
                 }
-
+                else{
+                    console.log(num1);
+                }
+                
+                
+                
             }
 
         </script>

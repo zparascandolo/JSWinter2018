@@ -35,7 +35,7 @@
                 
              */
             
-            var div = document.querySelector('.error');
+            let div = document.querySelector('.error');
             
             document.querySelector('button').addEventListener('click', clickME);
             
@@ -43,7 +43,17 @@
             function clickME() {
                 // Output to the console the paramter
                 div.classList.add('big');
+                this.style.backgroundColor = 'red'
             }
+            
+            div.addEventListener('click', function() {
+                div.classList.return('big');
+            })
+            
+            
+            
+        
+        
         
             
             </script>

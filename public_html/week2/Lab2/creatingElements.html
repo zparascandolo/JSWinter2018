@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Week 2 Files</title>
+        <style type="text/css">
+            .border{border:1px solid black;}
+        </style>
+    </head>
+
+    <body>
+        
+        
+        
+  
+
+    <script type="text/javascript">
+        //Use this Array of objects to complete the assignment.
+        let people = [
+            {first: "Jason", last: "Vorhees", credit: "Friday the 13th"},
+            {first: "Freddy", last: "Krueger", credit: "A Nightmare on Elm Street"},
+            {first: "Roger", last: "Rabbit", credit: "Who Framed Roger Rabbit"},
+            {first: "Kevin", last: "McCallister", credit: "Home Alone"},
+            {first: "Godzilla", last: "King of The Monsters", credit: "Godzilla"},
+            {first: "Buzz", last: "Lightyear", credit: "Toy Story"},
+            {first: "Marion", last: "Cobretti", credit: "Cobra"}
+        ]
+        
+        for(let i in people){
+            let tempDiv = document.createElement("div");
+            let firstP = document.createElement("p")
+            let lastP = document.createElement("p")
+            let creditP = document.createElement("p")
+            
+  
+            let firstTextNode = document.createTextNode(people[i].first);
+            let lastTextNode = document.createTextNode(people[i].last);
+            let creditTextNode = document.createTextNode(people[i].credit);
+            
+            firstP.appendChild(firstTextNode);
+            tempDiv.appendChild(firstP)
+            
+            lastP.appendChild(lastTextNode);
+            tempDiv.appendChild(lastP)
+            
+            creditP.appendChild(creditTextNode);
+            tempDiv.appendChild(creditP);
+            
+            
+            tempDiv.classList.add('border');
+            
+            document.body.appendChild(tempDiv);
+            
+            tempDiv.setAttribute("id", String(i));
+            
+            
+        }
+        
+        
+        
+
+    </script>
+  </body>
+</html>

@@ -3,10 +3,10 @@
  * want to access and change. 
  * 
  */
-var label = document.querySelector('label');
-var textField = document.querySelector('input[name="words"]');
-var addTextBtn = document.querySelector('input[name="add"]');
-var divToAdd = document.querySelector('div');
+let label = document.querySelector('label');
+let textField = document.querySelector('input[name="words"]');
+let  addTextBtn = document.querySelector('input[name="add"]');
+let  divToAdd = document.querySelector('div');
 
 /*
  * The addEventListener allows you to respond to the
@@ -33,7 +33,7 @@ function addText() {
     if ( textField.value.length ) {
         
         label.classList.remove('error');
-        var result = '<p>' + textField.value + '</p>';
+        var result = `<p> ${ textField.value } </p>`;
         divToAdd.innerHTML += result;
         
      } else {

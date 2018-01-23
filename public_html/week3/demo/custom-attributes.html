@@ -12,7 +12,11 @@
         </style>
     </head>
     <body>
-        <div data-index="3">TODO write content</div>
+        <div 
+           data-example="extra info" 
+            data-index="3">TODO write content</div>
+        
+        
         
         <script>
             /*
@@ -21,7 +25,7 @@
              * Display the attribute value in the console.
              * You can also use the inspect tool to see the changes.
              */
-            var div = document.querySelector('div')
+            let div = document.querySelector('div')
             
             console.log( div.dataset, div.dataset.index, div.getAttribute('data-index'));
             
