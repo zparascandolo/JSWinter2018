@@ -6,40 +6,62 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Lab </title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     </head>
+
     <body>
-        <label>Submit Name</label> <input type="text" name="words" />
+        <label>Full Name</label> <input type="text" name="words" />
         <br />
         <input type="button" name="add" value="Enter" />
-        
-        <p id="error"></p>
+
+        <span id="error"></span>
+
+
+        <p id="p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+
+        <button id="b1"> Font Color</button>
+        <button id='b2'> Underline</button>
+        <button id='b3'> Uppercase</button>
 
 
         <script>
 
+            let errorMessage = document.querySelector('#error');
+            let textField = document.querySelector('input[name="words"]');
+            let  addTextBtn = document.querySelector('input[name="add"]');
             addTextBtn.addEventListener('click', addText);
 
             function addText() {
 
                 if (textField.value.length < 5) {
-                    label.classList.add('error'); 
-                    
-                    document.getElementById.innerHTML
+
+                    errorMessage.innerHTML = 'This entry is invalid';
+
+                } else {
+                    errorMessage.innerHTML = '';
+
                 }
-                else {
-                    
-                }
-                } 
-    
-
-            
+            }
+            document.querySelector('#b1').addEventListener('click', fontColor);
+            document.querySelector('#b2').addEventListener('click', underLine);
+            document.querySelector('#b3').addEventListener('click', upperCase);
 
 
+            function fontColor() {
+                document.querySelector('#p').style.color = "blue";
+            }
 
-            <div>TODO write content</div>
+            function underLine() {
+                document.querySelector('#p').style.textDecoration = "underline"
+            }
+            function upperCase(){
+                document.querySelector('#p').style.textTransform = "uppercase"
+            }
+
         </script>
     </body>
 </html>

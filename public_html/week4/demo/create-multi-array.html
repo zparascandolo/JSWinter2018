@@ -20,14 +20,14 @@
             /* what can we change in the loop to improve it */
             
             str += '<table border="1">';
-            for ( var i = 0; i < 10; i++) {
-                items[i] = [];
-                str += '<tr>'
-               for ( var j = 0; j < 10; j++) {                
-                    items[i][j] = i*j;     
-                    str += '<td>' + items[i][j] + '</td>';
+            for ( let row = 0; row < 10; row++) {
+                items[row] = [];
+                str += '<tr>';
+               for ( let col = 0; col < 10; col++) {                
+                    items[row][col] = row*col;     
+                    str += '<td>' + items[row][col] + '</td>';
                 }    
-                str += '</tr>'
+                str += '</tr>';
             }
             str += '</table>';
             

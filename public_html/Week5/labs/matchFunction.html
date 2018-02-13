@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       
+               
+        <input type="text" name="address" value="1600 Pennsylvania Ave NW, Washington, DC 20500" size="100">
+        <input type="button" name="addText" value="Test">
+        
+         <div></div>
+         
+        <script>
+            
+            
+            
+            let textField = document.querySelector('input[name=address]');
+           let textButton = document.querySelector('input[name=addText]');
+           textButton.addEventListener('click', testAddress);
+            
+            
+            
+           function testAddress()
+           {
+               
+               
+               let str = textField.value;
+               let matchFound = str.match(/[0-9]{5}$/);
+               
+                              
+               if (matchFound !== null){
+                   
+                   document.querySelector('div').innerHTML= "The ZIP code is: " + matchFound;
+                   
+               }
+               else if (matchFound === null){
+                   
+                   document.querySelector('div').innerHTML = "Could not find ZIP code.";
+               }
+
+                             
+           }
+           
+                        
+        </script>
+            
+        
+    </body>
+</html>

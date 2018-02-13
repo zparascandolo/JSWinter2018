@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        
+        
+        <input type="text" name="textInput"> 
+        
+        <div></div>
+        
+        <script>
+            
+            str = document.querySelector('input[name=textInput]');
+            str.addEventListener('keyup', replaceFunc);
+            str.addEventListener('blur', reFormat);
+            
+            function replaceFunc ()
+            {
+                let oldStr = str.value;
+                let strReplace = /[^0-9]+/g;
+                let newStr = oldStr.replace(strReplace, "");
+                
+              console.log(newStr);
+            }
+             function reFromat(){
+                 
+                let phoneRe = /([0-9]{3})([0-9]{3})([0-9]{4})/;
+                 
+                let phoneNum = newStr.value;
+                
+                let newPhone = phoneNum.replace(phoneRe, '($1) $2-$3.');
+                
+                console.log(newPhone);
+                
+                
+                 
+             }
+            
+            
+        </script>
+        
+        
+        
+    </body>
+</html>
