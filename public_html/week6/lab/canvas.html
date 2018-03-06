@@ -17,21 +17,49 @@ and open the template in the editor.
     </head>
     <body>       
         <div></div>
-        <canvas id="race" width="750" height="150">
-            
-         let can = document.querySelector('div');
-         let ctx = can.getContext('2d');  
-            
-            
-        </canvas>
+        <canvas id="race" width="750" height="150"></canvas>
         <br />
         <button id="play">Play</button>
 
         <script type="text/javascript">
 
-            function randNum(max) {
-                return Math.ceil(Math.random() * max) + 1;
+            let can = document.querySelector('#race');
+            let ctx = can.getContext('2d');
+            
+
+            function drawClear() {
+                window.ctx.ClearRect(0, 0, window.can.width, window.can.height); // x y / w h
             }
+            
+            
+            let width = 100, height = 50, xaxis = 20, yaxis = 10; 
+            let max = 20;    
+
+            let raceBtn = document.querySelector('button[id=play]', startRace);
+            
+
+            function startRace() {
+                function moveRectX(){
+               if ( window.xaxis < window.canvasRight ) {
+                    window.drawClear();
+                    window.xaxis += randNum();                    
+                    window.ctx.fillRect(window.xaxis, window.yaxis, window.width, window.height); // x y / w h
+                    
+                } else {
+                    window.reset();
+                }
+
+                function randNum(max) {
+                    return Math.ceil(Math.random() * max) + 1;
+                }
+
+
+            }
+
+
+
+
+
         </script>    
 
 

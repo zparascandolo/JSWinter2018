@@ -35,7 +35,8 @@
                  
                 if ( window.yaxis < window.canvasBottom ) {
                     window.drawClear(); // Always clear the canvas before the next drawing
-                    window.yaxis += 20;   // change the position before updating the drawing                 
+                    window.yaxis += 20;   // change the position before updating the drawing  
+                    window.ctx.fillStyle = "red";
                     window.ctx.fillRect(window.xaxis, window.yaxis, window.width, window.height); // x y / w h
                     setTimeout(window.moveRectY, 100); // since we are not done, lets run the function for the next drawing
                 } else {
@@ -48,7 +49,8 @@
             function moveRectX(){
                if ( window.xaxis < window.canvasRight ) {
                     window.drawClear();
-                    window.xaxis += 20;                    
+                    window.xaxis += 20; 
+                    window.ctx.fillStyle = "blue";
                     window.ctx.fillRect(window.xaxis, window.yaxis, window.width, window.height); // x y / w h
                     setTimeout(window.moveRectY, 100);
                 } else {
