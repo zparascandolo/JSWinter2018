@@ -18,8 +18,10 @@
             
             str = document.querySelector('input[name=textInput]');
             str.addEventListener('keyup', replaceFunc);
+            str.addEventListener('focus', replaceFunc);
             str.addEventListener('blur', reFormat);
             
+          
             function replaceFunc ()
             {
                 let oldStr = str.value;
@@ -27,19 +29,20 @@
                 let newStr = oldStr.replace(strReplace, "");
                 
               console.log(newStr);
+              
+              str.value = newStr;
             }
-             function reFromat(){
+            
+             function reFormat(){
                  
-                let phoneRe = /([0-9]{3})([0-9]{3})([0-9]{4})/;
-                 
-                let phoneNum = newStr.value;
-                
+                let phoneRe = /([0-9]{3})([0-9]{3})([0-9]{4})/;                
+                let phoneNum = str.value;               
                 let newPhone = phoneNum.replace(phoneRe, '($1) $2-$3.');
                 
                 console.log(newPhone);
                 
-                
-                 
+                str.value=newPhone;
+                         
              }
             
             

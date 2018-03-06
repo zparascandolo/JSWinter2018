@@ -11,6 +11,41 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div></div>
+        
+        <script>  
+            
+            
+            let content = document.querySelector('div')
+            let myRequest = 'users.json'
+            
+            fetch(myRequest).then(function(response) {
+                return response.json()
+            })
+            .then(function(json) { 
+                
+                console.log(json);
+                
+                let str = '';
+                str += '<table>';
+            
+                str += `<tr><th>Username</th><th>Email</th><th>Registered</th><th>Active</th>`
+                
+                
+                for (let i in json) {
+                    
+                    str += `<tr div id="${i}"><td>${json[i].username} <td>${json[i].email}<td> ${json[i].registered} <td> ${json[i].isActive}  </div> `
+                    
+                    
+                }                
+                  content.innerHTML += str;
+           
+           
+            });
+           
+
+           
+        
+        </script>      
     </body>
 </html>

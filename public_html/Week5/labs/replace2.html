@@ -16,13 +16,16 @@
         
         <script>
             
-            str = document.querySelector('input[name=textInput]');
-            str.addEventListener('keyup', replaceFunc);
+            let str = document.querySelector('input[name=textInput]');
+            str.addEventListener('blur', replaceFunc);
+            
+            
+            
             
             function replaceFunc ()
             {
                 let oldStr = str.value;
-                let strReplace = /[^0-9]+/g;
+                let strReplace = /([0-9]{3})([0-9]{3})([0-9]{4})/;
                 let newStr = oldStr.replace(strReplace, "");
                 
                 document.querySelector('div').innerHTML = newStr;
